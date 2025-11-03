@@ -4,4 +4,4 @@ import App from './App';
 import Contato from './Telas/Contato/Contato'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Contato />); 
+root.render(<App />); 

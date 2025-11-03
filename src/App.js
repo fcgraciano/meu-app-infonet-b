@@ -1,19 +1,26 @@
 import React from 'react';
-import Contato from './Telas/Contato/Contato'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Home from './Telas/Home/Home'
+import Clientes from './Telas/Clientes/Clientes'
+import Atendentes from './Telas/Atendentes/Atendentes'
+import Servicos from './Telas/Servicos/Servicos'
 function App() {
   return (
-    <Contato>
-      </Contato>
-    // <div style={{ textAlign: 'center' }}>
-    //   <header>
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+    <BrowserRouter>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/Atendentes">Atendentes</Link>
+        <Link to="/Clientes">Clientes</Link>
+        <Link to="/Servicos">Serviços</Link>
+      </nav>
+      <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/Atendentes" element={<Atendentes/>} />
+          <Route path="/Clientes" element={<Clientes/>} />
+          <Route path="/Servicos" element={<Servicos/>} />
+      </Routes>
+    </BrowserRouter>
+    
   );
 }
 
