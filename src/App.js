@@ -35,7 +35,12 @@ function App() {
           </div>
         </div>
       </nav>
-      <div className='container mt-3'>
+      <div className='container mt-3' style={{
+        backgroundColor:'#FFF',
+        padding:'10px 20px',
+        borderRadius:'10px',
+        boxShadow: '5px 2px 20px black'
+        }}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Atendentes" element={<Atendentes />} />
